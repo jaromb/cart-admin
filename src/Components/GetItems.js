@@ -1,7 +1,7 @@
 
 export const getItems = async() => {
     try {
-      const response = await fetch("http://localhost:4000/admin/items",
+      const response = await fetch("https://git.heroku.com/my-helio-cart-api.git/admin/items",
       {
         credentials: 'include'
       })
@@ -15,7 +15,7 @@ export const getItems = async() => {
 
 export const getUsers = async() => {
     try{
-      const response = await fetch("http://localhost:4000/users", 
+      const response = await fetch("https://git.heroku.com/my-helio-cart-api.git/users", 
       {
         credentials: 'include'
       })
@@ -30,7 +30,7 @@ export const getUsers = async() => {
 
   export const getAdmins = async() => {
     try{
-      const response = await fetch("http://localhost:4000/admins", 
+      const response = await fetch("https://git.heroku.com/my-helio-cart-api.git/admins", 
       {
         credentials: 'include'
       })

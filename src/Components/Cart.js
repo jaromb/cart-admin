@@ -8,7 +8,7 @@ export const getCart = () => new Promise((resolve, reject) => {
 }) 
 
 export const addItemToCart = (item) => new Promise((resolve,reject) => {
-    fetch("http://localhost:4000/cart", {
+    fetch("https://git.heroku.com/my-helio-cart-api.git/cart", {
         method: "POST",
         headers: {"content-Type": "application/json"},
         body: JSON.stringify(item)
@@ -20,7 +20,7 @@ export const addItemToCart = (item) => new Promise((resolve,reject) => {
 
 export const removeItemFromCart = (_id) => new Promise((resolve,reject) => {
     console.log('delete button clicked for item id: ' + _id)
-    fetch(`http://localhost:4000/cart/${_id}`, {
+    fetch(`https://git.heroku.com/my-helio-cart-api.git/cart/${_id}`, {
         method: "DELETE"
     })
     .then(cart => {
@@ -29,7 +29,7 @@ export const removeItemFromCart = (_id) => new Promise((resolve,reject) => {
 })
 
 export const updateItemInCart = (item) => new Promise((resolve, reject) => {
-    fetch("http://localhost:4000/cart", {
+    fetch("https://git.heroku.com/my-helio-cart-api.git/cart", {
         method: "PUT",
         headers: {"content-Type": "application/json"},
         body: JSON.stringify(item)

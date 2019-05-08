@@ -53,7 +53,7 @@ class UserManagement extends Component {
     password: this.state.password}
 
     if(this.state.name !== '' && this.state.price !== '' && this.state.url !== '') {
-    fetch("http://localhost:4000/admin/user-management", {
+    fetch("https://git.heroku.com/my-helio-cart-api.git/admin/user-management", {
         method: "POST",
         credentials: 'include',
         headers: {"content-Type": "application/json"},
@@ -114,7 +114,7 @@ modifyUserInfo = () => new Promise((resolve,reject) => {
         email: this.state.updatedEmail,
         password: this.state.updatedPassword,
         _id: this.state.updateID}
-    fetch(`http://localhost:4000/users`, {
+    fetch(`https://git.heroku.com/my-helio-cart-api.git/users`, {
         method: "PUT",
         credentials: 'include',
         headers: {"content-Type": "application/json"},
@@ -135,7 +135,7 @@ modifyUser = () => {
 }
 
 removeUserFromList = (_id) => new Promise((resolve,reject) => {
-    fetch(`http://localhost:4000/users/${_id}`, {
+    fetch(`https://git.heroku.com/my-helio-cart-api.git/users/${_id}`, {
         method: "DELETE",
         credentials: 'include'
     })
