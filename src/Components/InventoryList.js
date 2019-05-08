@@ -16,7 +16,7 @@ class InventoryList extends Component {
      }
 
      removeItemFromInventory = (id) => new Promise((resolve,reject) => {
-        fetch(`https://git.heroku.com/my-helio-cart-api.git/items/${id}`, {
+        fetch(`https://my-helio-cart-admin.herokuapp.com/items/${id}`, {
             method: "DELETE"
         })
         .then(inventory => {
@@ -34,7 +34,7 @@ class InventoryList extends Component {
     }
 
     modifyInventoryItem = (id) => new Promise((resolve,reject) => {
-        fetch(`https://git.heroku.com/my-helio-cart-api.git/items/${id}`, {
+        fetch(`https://my-helio-cart-admin.herokuapp.com/items/${id}`, {
             method: "POST",
             body: {}
         })

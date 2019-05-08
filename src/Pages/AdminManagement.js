@@ -53,7 +53,7 @@ class AdminManagement extends Component {
     password: this.state.password}
 
     if(this.state.name !== '' && this.state.price !== '' && this.state.url !== '') {
-    fetch("https://git.heroku.com/my-helio-cart-api.git/admins", {
+    fetch("https://my-helio-cart-admin.herokuapp.com/admins", {
         method: "POST",
         credentials: 'include',
         headers: {"content-Type": "application/json"},
@@ -115,7 +115,7 @@ modifyUserInfo = (event) => new Promise((resolve,reject) => {
         password: this.state.updatedPassword,
         _id: this.state.updateID}
 
-    fetch(`https://git.heroku.com/my-helio-cart-api.git/admins`, {
+    fetch(`https://my-helio-cart-admin.herokuapp.com/admins`, {
         method: "PUT",
         credentials: 'include',
         headers: {"content-Type": "application/json"},
@@ -136,7 +136,7 @@ modifyUser = () => {
 }
 
 removeUserFromList = (_id) => new Promise((resolve,reject) => {
-    fetch(`https://git.heroku.com/my-helio-cart-api.git/admins/${_id}`, {
+    fetch(`https://my-helio-cart-admin.herokuapp.com/admins/${_id}`, {
         method: "DELETE",
         credentials: 'include'
     })
