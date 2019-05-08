@@ -1,7 +1,7 @@
 
 export const getItems = async() => {
     try {
-      const response = await fetch("https://my-helio-cart-admin.herokuapp.com/admin/items",
+      const response = await fetch("https://my-helio-cart-api.herokuapp.com/admin/items",
       {
         credentials: 'include'
       })
@@ -15,7 +15,7 @@ export const getItems = async() => {
 
 export const getUsers = async() => {
     try{
-      const response = await fetch("https://my-helio-cart-admin.herokuapp.com/users", 
+      const response = await fetch("https://my-helio-cart-api.herokuapp.com/users", 
       {
         credentials: 'include'
       })
@@ -30,7 +30,7 @@ export const getUsers = async() => {
 
   export const getAdmins = async() => {
     try{
-      const response = await fetch("https://my-helio-cart-admin.herokuapp.com/admins", 
+      const response = await fetch("https://my-helio-cart-api.herokuapp.com/admins", 
       {
         credentials: 'include'
       })
