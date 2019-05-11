@@ -123,7 +123,7 @@ modifyInventoryItem = () => new Promise((resolve,reject) => {
     }).catch(reject)
 })
 
-modifyInventory = () => () => {
+modifyInventory = () => {
     console.log('clicked');
     this.modifyInventoryItem()
     .then(inventory =>
@@ -205,7 +205,7 @@ removeFromInventory = (item) => () => {
                         fontWeight: 'bold',
                         cursor: 'pointer',
                         alignSelf: 'center'}} onClick={
-                            this.modifyInventory()}>Update Item</button>
+                            this.modifyInventory}>Update Item</button>
                 <br></br>
                 
                 <p>Click below to</p>
